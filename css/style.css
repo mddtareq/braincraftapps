@@ -1,0 +1,306 @@
+/* fonts */
+@font-face {
+    font-family: hanaleifill ;
+    src: url('/fonts/HanaleiFill.ttf');   
+}
+@font-face {
+    font-family: geostarfill ;
+    src: url('/fonts/GeostarFill.ttf');   
+}
+@font-face {
+    font-family: miltonian ;
+    src: url('/fonts/Miltonian.ttf');   
+}
+@font-face {
+    font-family: crafter ;
+    src: url('/fonts/crafter.ttf');   
+}
+@font-face {
+    font-family: butcherman ;
+    src: url('/fonts/Butcherman.ttf');   
+}
+
+/* default structuring  flex and column*/
+.custom-flex{
+    display: flex;
+    background: black;
+}
+.custom-column{
+    width:50%;
+}
+.max-width{
+    max-width:992px;
+    margin: auto;
+}
+@media only screen and (max-width:768px){
+    .custom-flex{
+        display: block;
+    }
+    .custom-column{
+        width:100%;
+    }
+    .display-text{
+        width: 360px;
+        max-height:300px;
+    }
+}
+@media only screen and (max-width:360px){
+    .display-text{
+        width: 250px!important;
+        max-height:300px;
+    }
+}
+
+/* image ,styling and animation result */
+.results{
+    background: black;
+}
+.image-input{
+    padding: 15px 10px;
+    color: white;
+    font-weight: 600;
+    font-family: 'Roboto', sans-serif;
+}
+.image-input input{
+    cursor: pointer;
+    font-weight: 600;
+    font-family: 'Roboto', sans-serif;
+}
+.image-show{
+    position: relative;
+    padding: 15px 10px;
+}
+.image-show img{
+    width:100%;
+    height: 400px;
+}
+.display-text{
+    text-align: center;
+    word-wrap: break-word;
+    overflow:hidden;
+    width: 95%;
+    color: rgb(252, 252, 252);
+    font-weight: bold;
+    font-size: 30px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+/* input font type and animation */
+.types{
+    background: #212121;
+}
+#text{
+    letter-spacing:1px;
+    text-transform:uppercase;
+}
+.text-input{
+    margin: 20px;
+}
+.text-input input{
+    width: 98%;
+    height: 30px;
+}
+.info-head{
+    margin: 20px;
+    padding-left: 5px;
+    color: white;
+    font-size:25px ;
+}
+.font-button{
+    display: flex;
+    margin: 20px;
+}
+.font-button button{
+    cursor: pointer;
+    width: 50%;
+    background: #2c2c2c;
+    border: none;
+    color: white;
+    margin: 0px 4px;
+    padding: 15px 10px;
+    font-size: 15px;
+    outline: none;
+    overflow: hidden;
+
+}
+.default-font{
+    font-family:'Times New Roman', Times, serif;
+}
+.hanaleifill{
+    font-family: hanaleifill;
+}
+.geostarfill{
+    font-family: geostarfill;
+}
+.miltonian{
+    font-family: miltonian;
+}
+.crafter{
+    font-family: crafter;
+}
+.butcherman{
+    font-family: butcherman;
+}
+
+/* animations */
+  @keyframes bounce {
+    from,
+    20%,
+    53%,
+    to {
+      transform: translate3d(0, 0, 0);
+    }
+  
+    40%,
+    43% {
+      transform: translate3d(0, -30px, 0) scaleY(1.1);
+    }
+  
+    70% {
+      transform: translate3d(0, -15px, 0) scaleY(1.05);
+    }
+  
+    80% {
+      transform: translate3d(0, 0, 0) scaleY(0.95);
+    }
+  
+    90% {
+      transform: translate3d(0, -4px, 0) scaleY(1.02);
+    }
+  }
+  @keyframes heartBeat {
+    0% {
+      transform: scale(1);
+    }
+  
+    14% {
+      transform: scale(1.3);
+    }
+  
+    28% {
+      transform: scale(1);
+    }
+  
+    42% {
+      transform: scale(1.3);
+    }
+  
+    70% {
+      transform: scale(1);
+    }
+  }
+  @keyframes zoomIn {
+    from {
+      opacity: 0;
+      transform: scale3d(0.3, 0.3, 0.3);
+    }
+  
+    50% {
+      opacity: 1;
+    }
+  }
+  @keyframes flash {
+    from,
+    50%,
+    to {
+      opacity: 1;
+    }
+  
+    25%,
+    75% {
+      opacity: 0;
+    }
+  }
+  @keyframes lightSpeedInRight {
+    from {
+      transform: translate3d(100%, 0, 0) skewX(-30deg);
+      opacity: 0;
+    }
+  
+    60% {
+      transform: skewX(20deg);
+      opacity: 1;
+    }
+  
+    80% {
+      transform: skewX(-5deg);
+    }
+  
+    to {
+      transform: translate3d(0, 0, 0);
+    }
+  }
+  @keyframes flip {
+    from {
+      transform: perspective(400px) scale3d(1, 1, 1) translate3d(0, 0, 0) rotate3d(0, 1, 0, -360deg);
+      animation-timing-function: ease-out;
+    }
+  
+    40% {
+      transform: perspective(400px) scale3d(1, 1, 1) translate3d(0, 0, 150px)
+        rotate3d(0, 1, 0, -190deg);
+      animation-timing-function: ease-out;
+    }
+  
+    50% {
+      transform: perspective(400px) scale3d(1, 1, 1) translate3d(0, 0, 150px)
+        rotate3d(0, 1, 0, -170deg);
+      animation-timing-function: ease-in;
+    }
+  
+    80% {
+      transform: perspective(400px) scale3d(0.95, 0.95, 0.95) translate3d(0, 0, 0)
+        rotate3d(0, 1, 0, 0deg);
+      animation-timing-function: ease-in;
+    }
+  
+    to {
+      transform: perspective(400px) scale3d(1, 1, 1) translate3d(0, 0, 0) rotate3d(0, 1, 0, 0deg);
+      animation-timing-function: ease-in;
+    }
+  }
+  .animate-button{
+    display: flex;
+    margin: 20px;
+}
+.animate-button button{
+    cursor: pointer;
+    width: 50%;
+    background: #2c2c2c;
+    border: none;
+    color: white;
+    margin: 0px 4px;
+    padding: 15px 10px;
+    font-size: 15px;
+    font-weight: 500;
+    outline: none;
+    font-family: 'Roboto', sans-serif;
+
+}
+  .bounce{
+      animation-name: bounce;
+      animation-duration:1s;
+  }
+  .heart-beat{
+    animation-name: heartBeat;
+    animation-duration:1s;
+}
+.flip{
+    animation-name:flip;
+    animation-duration:1s;
+}
+.zoom{
+    animation-name: zoomIn;
+    animation-duration:1s;
+}
+.rotate{
+    animation-name:flash;
+    animation-duration: 1s;
+}
+.light{
+    animation-name: lightSpeedInRight;
+    animation-duration: 1s;
+}

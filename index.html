@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo Project - CSS3/Javascript</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <header></header>
+    <main>
+        <div class="max-width">
+            <div class="custom-flex">
+                <div class="custom-column results">
+                    <div class="image-input">
+                        <label for="image-file">Choose an Image : &nbsp;</label>
+                        <input id="image-file" type="file" >
+                    </div>
+                    <div class="image-show">
+                        <img id="image-set" src="./images/tareq.jpeg" alt="">
+                        <div class="display-text ">
+                            <p id="animate"><span id="text"></span></p>
+                        </div>
+                    </div>   
+                </div>
+                <div class="custom-column types">
+                    <div class="text-input">
+                        <input id="input-text" type="text" maxlength="150">
+                    </div>
+                    <div class="info-head">
+                        Style
+                    </div>
+                    <div class="font-button">
+                        <button class="default-font" id="default-font">DEFAULT</button>
+                        <button class="hanaleifill" id="hanaleifill">HANALEI FILL</button>
+                    </div>
+                    <div class="font-button">
+                        <button class="geostarfill" id="geostarfill">GEOSTAR</button>
+                        <button class="miltonian" id="miltonian">MILTONIAN</button>
+                    </div>
+                    <div class="font-button">
+                        <button class="crafter" id="crafter">CRAFTER</button>
+                        <button class='butcherman' id='butcherman'>BUTCHERMAN</button>
+                    </div>
+                    <div class="info-head">
+                        Animation
+                    </div>
+                    <div class="animate-button">
+                        <button id="flip">FLIP</button>
+                        <button  id="bounce">BOUNCE</button>
+                    </div>
+                    <div class="animate-button">
+                        <button  id="heart-beat">HEART BEAT</button>
+                        <button  id="zoom">ZOOM</button>
+                    </div>
+                    <div class="animate-button">
+                        <button  id="flash">FLASH</button>
+                        <button  id='light'>LIGHT</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer></footer>
+    <script src="./js/function.js"></script>
+</body>
+
+</html>
